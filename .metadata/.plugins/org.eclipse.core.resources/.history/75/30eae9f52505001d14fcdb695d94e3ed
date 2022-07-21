@@ -1,0 +1,7 @@
+package jdbcProject;
+
+public class DbManager {
+	public static void main(String[] args) {
+		
+	}
+}

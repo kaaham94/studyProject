@@ -1,0 +1,6 @@
+package mapper;
+
+public class Snippet {
+	SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+}
+

@@ -1,0 +1,22 @@
+package jdbcProject;
+
+import java.sql.SQLException;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
+		Dao jdbcCon = new Dao();
+		
+		String sqlQuery = "select * from userInfo";
+		String CURDtype = "S";
+		Object [] param = {29};
+		
+		/*
+		 * String sqlQuery = "insert into userInfo(age, name) values(?, ?)"; String
+		 * CURDtype = "I"; Object [] param = {29, "jh"};
+		 */	
+		jdbcCon.dbConnection(sqlQuery,CURDtype,param);
+	
+	}
+
+
+}

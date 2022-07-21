@@ -1,0 +1,14 @@
+package jdbcProject;
+
+import java.sql.SQLException;
+import jdbcProject.infoDao;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
+		infoDao infoDao = new infoDao();
+		
+		infoDao.insertUserinfo();
+
+	}
+
+}

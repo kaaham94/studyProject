@@ -1,0 +1,18 @@
+package jdbcProject;
+
+import java.sql.SQLException;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
+		Dao jdbcCon = new Dao();
+		
+		String sqlQuery = "delete from userInfo where age = ?";
+		String CURDtype = "D";
+		Object [] param = {29};
+		
+		jdbcCon.dbConnection(sqlQuery,CURDtype,param);
+	
+	}
+
+
+}

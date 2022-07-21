@@ -1,0 +1,11 @@
+package beanProject;
+
+import java.util.Map;
+
+public class B {
+	private Map map;
+	
+	public B() {
+		
+	}
+}

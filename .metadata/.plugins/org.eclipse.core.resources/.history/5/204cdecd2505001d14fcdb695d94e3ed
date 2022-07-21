@@ -1,0 +1,8 @@
+package jdbcProject;
+
+public class Driver {
+	//static Block
+	static {
+		System.out.println("test");
+	}
+}

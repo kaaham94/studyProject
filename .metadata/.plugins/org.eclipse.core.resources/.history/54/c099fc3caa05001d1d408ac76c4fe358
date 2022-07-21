@@ -1,0 +1,55 @@
+package jdbcProject;
+
+import java.sql.SQLException;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
+		Dao jdbcCon = new Dao();
+		
+		String sqlQuery = "insert into userInfo(age, name) values (?,?)";
+		String CURDtype = "I";
+		Object [] param = {29,"jh"};
+		
+		jdbcCon.dbConnection(sqlQuery,CURDtype,param);
+		
+	
+	}
+
+	public void test() {
+		/*
+		// 1.Driver 로드
+		Class.forName("org.mariadb.jdbc.Driver");
+		//System.out.println("드라이버 로드 성공");
+		// 2.Connection 객체를 생성하기 DataBase 연결하기
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String url = "jdbc:mariadb://127.0.0.1:3306/tps?characterEncoding=utf8&autoReconnect=true\r\n";
+		String name = "kaaham";
+		String pw = "123";
+
+		try {
+			con = DriverManager.getConnection(url, name, pw);
+			StringBuffer sql = new StringBuffer();
+			sql.append("insert into userInfo(age, name)");
+			sql.append("values(29,'jh')");
+			
+			pstmt = con.prepareStatement(sql.toString());
+			rs  =  pstmt.executeQuery();
+			while(rs.next()){
+				int index = 1;
+				int deptno = rs.getInt(index++);
+				String dname = rs.getString(index++);
+				System.out.printf("%d, %s, %s\n", deptno, dname);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 3.쿼리 전송하기
+
+		// 4.결과출력
+		 */
+	}
+}

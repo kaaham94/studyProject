@@ -1,0 +1,4 @@
+driver=org.mariadb.jdbc.Driver
+url=url111
+username=username111
+password=password11

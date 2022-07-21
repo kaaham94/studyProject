@@ -1,0 +1,8 @@
+package mybatis;
+
+public class Mybatis {
+
+	public static void main(String[] args) {
+		String resource = "mapper/mybatis-config.xml"
+	}
+}

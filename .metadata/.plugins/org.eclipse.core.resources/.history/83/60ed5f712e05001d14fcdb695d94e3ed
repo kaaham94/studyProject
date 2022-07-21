@@ -1,0 +1,16 @@
+package jdbcProject;
+
+public class Driver {
+	
+	public Driver() {
+		System.out.println("생성자");
+	}
+	
+	
+	//static Block
+	//실행되는 시점 : class 파일이 로드 될 때
+	//로드란? class 파일이 jvm(memory)으로 올라갔을떄
+	static {
+		System.out.println("test");
+	}
+}

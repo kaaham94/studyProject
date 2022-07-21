@@ -1,0 +1,37 @@
+package jdbcProject;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class DbConnection {
+
+	public DbConnection() {
+
+		// 1.Driver ·Îµå
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//return °ª
+		Object returnValue = null;
+		
+		String url = "jdbc:mariadb://127.0.0.1:3306/tps?characterEncoding=utf8&autoReconnect=true\r\n";
+		String name = "kaaham";
+		String pw = "123";
+
+		try {
+			DriverManager.getConnection(url, name, pw);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+}

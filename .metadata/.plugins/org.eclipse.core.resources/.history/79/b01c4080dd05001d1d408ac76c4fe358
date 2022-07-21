@@ -1,0 +1,13 @@
+package mybatis;
+
+import java.io.InputStream;
+
+import javax.annotation.Resources;
+
+public class Mybatis {
+
+	public static void main(String[] args) {
+		String resource = "mapper/mybatis-config.xml";
+		InputStream inputtStream = Resources.getResourceAsStream(resource);
+	}
+}

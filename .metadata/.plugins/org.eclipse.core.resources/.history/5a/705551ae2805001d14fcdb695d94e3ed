@@ -1,0 +1,13 @@
+package jdbcProject;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException {
+		
+		Driver d;
+		
+	}
+	
+	
+	public void test() {
+	}
+}

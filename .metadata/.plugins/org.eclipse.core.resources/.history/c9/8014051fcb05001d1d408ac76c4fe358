@@ -1,0 +1,9 @@
+import java.util.Properties;
+
+import jdbcProject.Dao;
+
+public class PropertiesTest {
+
+	public static void main(String[] args) {
+	}
+}

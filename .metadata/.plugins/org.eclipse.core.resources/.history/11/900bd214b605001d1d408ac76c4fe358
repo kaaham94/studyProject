@@ -1,0 +1,22 @@
+package jdbcProject;
+
+import java.util.List;
+import java.util.Map;
+
+public class infoDao  {
+
+	
+	
+	public List<Map> selectList(){
+		
+		Dao dao = new Dao();
+		String sqlQuery = "select * from userInfo";
+		String CURDtype = "S";
+		Object[] param = { 29 };
+		
+		List<Map> selectList = (List<Map>) dao.dbConnection(sqlQuery, CURDtype, param);
+		
+		return selectList; 
+	}
+	
+}

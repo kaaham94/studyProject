@@ -1,0 +1,5 @@
+package mybatisProject;
+
+public class MybatisDbConnection {
+
+}

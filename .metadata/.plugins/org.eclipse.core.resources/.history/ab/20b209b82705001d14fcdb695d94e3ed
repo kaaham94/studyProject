@@ -1,0 +1,12 @@
+package jdbcProject;
+
+public class DbManager {
+	public static void main(String[] args) {
+		try {
+			Class.forName("jdbcProject.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

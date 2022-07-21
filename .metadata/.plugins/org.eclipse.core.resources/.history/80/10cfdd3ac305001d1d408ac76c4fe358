@@ -1,0 +1,35 @@
+package jdbcProject;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class DbConnection {
+
+	public DbConnection() {
+
+		// 1.Driver 로드
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// 2.Connection 객체를 생성하기 DataBase 연결하기
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int ret = 0;
+		
+		//return 값
+		Object returnValue = null;
+		
+		String url = "jdbc:mariadb://127.0.0.1:3306/tps?characterEncoding=utf8&autoReconnect=true\r\n";
+		String name = "kaaham";
+		String pw = "123";
+
+	}
+	
+	
+}

@@ -1,0 +1,18 @@
+package jdbcProject;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException {
+		try {
+			System.out.println("½ÇÇà");
+			Thread.sleep(3000);
+			Class.forName("jdbcProject.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void test() {
+	}
+}

@@ -1,0 +1,21 @@
+package mybatisProject;
+
+import java.nio.charset.Charset;
+
+
+public class MybatisDbConnection {
+	
+	
+	public static void main(String[] args)  {
+		
+		
+		
+		/*
+		 * String resource = "config/mybatis-config.xml"; InputStream inputStream =
+		 * Resources.getResourceAsStream(resource); SqlSessionFactory sqlSessionFactory
+		 * = new SqlSessionFactoryBuilder().build(inputStream);
+		 */
+		
+	}
+	
+}

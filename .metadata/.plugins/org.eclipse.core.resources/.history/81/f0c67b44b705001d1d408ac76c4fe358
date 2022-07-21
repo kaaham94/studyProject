@@ -1,0 +1,46 @@
+package jdbcProject;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+
+public class infoDao  {
+
+	
+	
+	public List<Map> selectList() throws ClassNotFoundException, InterruptedException, SQLException{
+		
+		Dao dao = new Dao();
+		String CURDtype = "S";
+		String sqlQuery = "select * from userInfo";
+		Object[] param = { 29 };
+		
+		List<Map> selectList = (List<Map>) dao.dbConnection(sqlQuery, CURDtype, param);
+		
+		return selectList; 
+	}
+
+	
+
+	public void insertUserinfo() throws ClassNotFoundException, InterruptedException, SQLException{
+		
+		Dao dao = new Dao();
+		String CURDtype = "I"; 
+		String sqlQuery = "insert into userInfo(age, name) values(?, ?)"; 
+		Object [] param = {29, "jh"};
+		
+		dao.dbConnection(sqlQuery, CURDtype, param);
+
+	}
+	
+	
+	public void deleteUserinfo() throws ClassNotFoundException, InterruptedException, SQLException{
+		
+		Dao dao = new Dao();
+		String CURDtype = "D"; 
+		String sqlQuery = "delete userInfo where name = ? "; 
+		Object [] param = {"jh"};
+		
+		dao.dbConnection(sqlQuery, CURDtype, param);
+	}
+}

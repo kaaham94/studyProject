@@ -1,0 +1,9 @@
+package jdbcProject;
+
+public class Driver {
+	//static Block
+	//실행되는 시점 : class 파일이 로드 될 때
+	static {
+		System.out.println("test");
+	}
+}

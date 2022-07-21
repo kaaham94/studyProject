@@ -1,0 +1,15 @@
+package beanProject;
+
+import java.util.Map;
+
+public class B {
+	private Map name;
+	
+	public B(Map p_name) {
+		this.name = p_name;
+	}
+	
+	public void printB () {
+		System.out.println(name);
+	}
+}

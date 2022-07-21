@@ -1,0 +1,17 @@
+package mybatisProject;
+
+import java.io.InputStream;
+
+import javax.annotation.Resources;
+
+public class MybatisDbConnection {
+
+	public static void main(String[] args) {
+
+		String resource = "config/mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+	}
+
+}

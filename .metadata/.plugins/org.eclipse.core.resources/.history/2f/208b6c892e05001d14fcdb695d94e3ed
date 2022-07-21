@@ -1,0 +1,47 @@
+package jdbcProject;
+
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DbManager {
+	public static void main(String[] args) throws InterruptedException, SQLException {
+
+		// 1.Driver 로드
+		try {
+			
+			Driver driver = new org.mariadb.jdbc.Driver();
+			DriverManager.registerDriver(driver);
+			
+			Class.forName("org.mariadb.jdbc.Driver");
+			System.out.println("드라이브로드 성공");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 2.Connection 객체를 생성하기 DataBase 연결하기
+		Connection con = null;
+		PreparedStatement pstmt = null;
+
+		String url = "jdbc:mariadb://127.0.0.1:3306/tps?characterEncoding=utf8&autoReconnect=true\r\n";
+		String name = "kaaham";
+		String pw = "123";
+
+		try {
+			con = DriverManager.getConnection(url, name, pw);
+			System.out.println(con);
+			System.out.println("db 연결 성공");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 3.쿼리 전송하기
+		
+		// 4.결과출력
+	}
+
+	public void test() {
+	}
+}
